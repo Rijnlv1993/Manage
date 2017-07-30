@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>网站设置</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<style type="text/css">
+		.webset{
+			margin: 10px;
+		}
+       dl dt{
+       	margin-left: 0;
+       }
+       .btn0{
+       	margin:10px;
+       	width: 80px;
+       	height: 30px;
+       	background:#0D9AE4;
+       	border: 1px solid  #eee;
+       	font-size: bold;
+       }
+       .btn0:hover{
+       	background: 
+       	#0084C9;
+       }
+       .btn01{
+       	background: #fff;
+       	border-bottom: none;
+       }
+       .m{
+       	margin:20px;
+       }
+        dl{
+        	margin-top: 10px;
+        }
+	</style>
+</head>
+<body>
+ <div class="webset clearfix">
+ <div class="pos">
+	 		<span>网站设置</span>
+	 	 </div>
+ <div class="itab clearfix" id="itab" > 
+ <div class="left">
+ 	 
+  	<input type="button"  value="站点配置" class="btn0">
+    
+  	<input type="button"  value="核心配置" class="btn0">
+  </div>
+</div>
+
+<div class="itabcontent" id="itabcontent"> 
+  <div class="m clearfix " id="rd" >
+  <dl>
+  	    <dt>开启会员功能:</dt>
+  		<dd>
+  		<span> <input type="radio" name="yes" value="1" checked="checked">是</span>
+  	    <span> <input type="radio" name="yes" value="2">否</span>
+  		</dd>
+  </dl>
+  	<dl >
+  		<dt >开启邮箱验证：</dt>
+  		<dd>
+  		<span> <input  type="radio" value="1" name="yels" checked="checked">是</span>
+  	    <span> <input  type="radio"  name="yels" value="2" >否</span>
+  	    </dd>
+  	</dl>
+</div>
+<div class="m" style="display: none;"> 
+     <dl class="clearfix">
+  		<dt>允许附件类型</dt>
+  		<dd><textarea class="textarea-default">www,ftp,user</textarea></dd>
+  	</dl>
+  	<dl class="clearfix">
+  		<dt class="surebtn">保存按钮：</dt>
+  		 
+  	</dl>
+
+  	<dl class="clearfix">
+  		<dt>开启会员功能：</dt>
+  		<dd><input type="text" value="54333"></dd>
+  	</dl>
+  	<dl class="clearfix">
+  		<dt class="surebtn">保存按钮：</dt>
+  		 
+  	</dl>
+  </div>
+  </div>
+  
+ <script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+ <script type="text/javascript">
+ 	$(function(){
+ 		 $('#itab div input' ).click(function(){
+ 		 	var _id=$(this).index();
+ 		 	$(this).addClass('btn01').siblings().removeClass('btn01');
+ 		 	$('#itabcontent').children('.m').eq(_id).fadeIn('fast').siblings('.m').css('display','none');
+ 		 })
+
+
+
+ 		  
+
+ 		 	 
+ 		 })
+ 		 	
+ 	
+ </script>
+</body>
+</html>
